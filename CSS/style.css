@@ -24,17 +24,31 @@
   a {
     text-decoration: none;
   }
+  a:hover {
+    color: white;
+    opacity: 0.6;
+  }
+
+  button:hover {
+    color: white;
+    opacity: 0.6;
+  }
+
+
   li {
     list-style-type: none;
   }
   /*header css*/
   .header {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+    background-image: url(../IMG/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000;
     position: relative;
     z-index: 0;
+
+    padding-top: 68px;
+    padding-bottom: 140px;
   }
   
   .header::after {
@@ -59,19 +73,13 @@
     justify-content: space-between;
   }
   
-  .header_logo {
-    padding-top: 28px;
-  }
-  
   .header_logo > a > img {
-    width: 179px;
-    height: 41px;
+    width: 179px;    
   }
   
   .header_nav {
     display: flex;
     justify-content: space-around;
-    padding-top: 40px;
     
   }
     
@@ -81,7 +89,7 @@
 
   .header_nav > ul > li {
     display: inline-block;
-    padding-right: 30px;
+    margin-right: 30px;
   }
   
   .header_nav > ul > li > a {
@@ -90,12 +98,12 @@
     text-transform: uppercase;
      
   }
-  
+
+   
   .header_caption {
     display: block;
     margin: 0 auto;
     margin-top: 178px;
-    padding-bottom: 140px;
     text-align: center;
     color: #fff;
     width: 627px;
@@ -116,7 +124,7 @@
     }
     .header_nav_burger {
       display: block;
-      margin-top: 45px;
+      margin-top: 15px;
       
     }
     .burger_part {
@@ -126,6 +134,7 @@
       margin-top: 5px;
       background-color: white;
     }
+    
   }
   @media (max-width: 640px) {
     .header {
@@ -140,7 +149,7 @@
     }
     .header_nav_burger {
       display: block;
-      margin-top: 45px;
+      margin-top: 15px;
       
     }
     .burger_part {
@@ -149,6 +158,9 @@
       display: block;
       margin-top: 5px;
       background-color: white;
+    }
+    .header_caption {
+      width: 100%;
     }
   }
 
@@ -185,15 +197,19 @@
     justify-content: space-between;
   }
 
+  .trends_card {
+    min-height: 348px;
+  }
+
   .trends_card:nth-child(-n+3) {
-    margin-right: 15px;
+    margin-right: 5px;
   }
 
   .trends_content_plant {
     width: 25%;
     background-image: url('../IMG/trend1.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #000;
     position: relative;
     z-index: 0;
@@ -224,7 +240,7 @@
     margin-top: 40%;
     border: 3px solid;
     border-color: rgba(181, 159, 91, 0.6);
-    padding: 20px 20px 35px;
+    padding: 35px 20px 35px;
 
     
   }
@@ -312,18 +328,26 @@
     z-index: -1;  
   }
 
+  .trend_flex > ul {
+    margin-bottom: 10px;
+  }
+
   .trend_flex > ul > li {
     display: inline-block;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    margin-right: 10px;
   }
   
+  .trend_flex > ul > li:nth-last-child(1) {
+    margin-right: 0px;
+  }
+
   .trend_flex > ul > li > a {
     color: #B59F5B;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
+   
   .trend_flex > h3 {
     font-size: 20px;
     font-weight: bold;
@@ -333,8 +357,7 @@
   .trend_flex > h3 > a {
     color: white;
   }
-
-
+  
   @media (min-width: 641px) and (max-width: 1200px) {
     .trends_main {
       flex-wrap: wrap;
@@ -342,15 +365,15 @@
             
     }
     .trends_card {
-      width: 48%;
+      width: 49%;
       
     }
 
     .trends_card:nth-child(3) {
-      margin-top: 15px;
+      margin-top: 5px;
     }
     .trends_card:nth-child(4) {
-      margin-top: 15px;
+      margin-top: 5px;
     }
     .trends_card:nth-child(2) {
       margin-right: 0px;
@@ -415,18 +438,24 @@
   }
   
   .content_logo {
-    padding-right: 30px;
+    margin-right: 30px;
   }
   
   .content_logo > img {
     width: 380px;
   }
   
+  .content_text > ul {
+    margin-bottom: 10px;
+  }
   
   .content_text > ul > li {
     display: inline-block;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .content_text > ul > li:nth-last-child(1) {
+    margin-right: 0px;
   }
   
   .content_text > ul > li > a {
@@ -455,7 +484,7 @@
     font-weight: bold;
   }
   .content_text > p {
-    padding-top: 62px;
+    margin-top: 62px;
     font-size: 15px;
   }
   
@@ -496,7 +525,7 @@
   }
   
   .section_part_img {
-    padding-right: 15px;
+    margin-right: 15px;
   }
   
   .section_part_img > img {
@@ -542,7 +571,7 @@
   
   .search_input {
     display: block;
-    width: 96%;
+    width: 92%;
     padding-bottom: 19px;
     padding-top: 12px;
     padding-left: 10px;
@@ -569,7 +598,7 @@
     height: 48px;
     background-color: #B59F5B; 
     border: none;
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+    background-image: url(../SVG/search.svg);
     background-repeat: no-repeat;
     background-size: 18px 18px;
     background-position: center center;
@@ -661,6 +690,8 @@
   }
   
   .themes_text_top {
+    display: inline-block;
+    margin-left: 5px;
     vertical-align: top;
     color: #B59F5B;
     font-size: 12px;
@@ -688,12 +719,12 @@
   }
   @media (max-width: 640px) {
     .middle {
-      width: 640px;
+      width: 100%;
       flex-direction: column;
     }
     
     .main {
-      width: 380px;
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -701,9 +732,20 @@
       flex-direction: column;
     }
     .aside {
-      width: 380px;
+      width: 100%;
       margin: 0 auto;
       margin-top: 20px;
+    }
+
+    .search_input {
+      width: 97%;
+    }
+
+    .content_logo {
+      margin-right: 0px;
+    }
+    .content_logo > img {
+      width: 100%;
     }
   }
 
@@ -910,20 +952,27 @@
     justify-content: center;
   }
   
+  .footer_links_flex > li {
+    margin-right: 25px;
+  }
+
+  .footer_links_flex > li:nth-last-child(1) {
+    margin-right: 0px;
+  }
+
+
   .dirbbble {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/001-dribbble.svg);
+    background-image: url(../SVG/001-dribbble.svg);
     background-repeat: no-repeat;
-    padding-right: 25px;
   }
   
   .pinterest {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/002-pinterest.svg);
+    background-image: url(../SVG/001-pinterest.svg);
     background-repeat: no-repeat;
-    padding-right: 25px;
   }
   
   .tumblr {
-    background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/social/003-tumblr.svg);
+    background-image: url(../SVG/003-tumblr.svg);
   }
   
   .footer_copy {
@@ -1110,6 +1159,7 @@
     border: none;
     background-color: #F3F7F6;
     color: black;
+    resize: none;
   }
   
   .pop_up_button {
